@@ -66,15 +66,14 @@
   }
 </script>
 
-<div class="flex flex-col items-center justify-center gap-4">
-  <h1>IP Address Tracker</h1>
-  <input type="text" bind:value={ip} placeholder="Enter your IP" />
-  <button class="btn" onclick={combineLink}>Submit</button>
-  <div class="flex flex-row items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg text-black">
-    <p>IP Address: {ipad}</p>
-    <p>Location: {location}</p>
-    <p>Timezone: {timezone}</p>
-    <p>ISP: {isp}</p>
-  </div>
-  <div id="map" class="w-80 h-48"></div>
+<div class="flex flex-col items-center justify-center gap-4 ">
+	<h1>IP Adress Tracker</h1>
+	<input type="text" bind:value={ip} placeholder="Enter your IP" />
+	<button class="btn" onclick={combineLink}>Submit</button>
+	<div class="flex flex-row items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg text-black">
+		<p>IP Address: {ipad}</p>
+		<p>Location: {location}</p>
+		<p>Timezone: {timezone}</p>
+		<p>ISP: {isp}</p>
+	</div>
 </div>
