@@ -25,30 +25,30 @@
 	let timezone = '';
 	let isp = '';
 
-	 async function fetchIpData() {
+	async function fetchIpData() {
 		try {
 			const response = await fetch(fetchlink + ip);
 			const data = await response.json();
 			console.log(data);
 			ipad = data.ip;
 			location = data.location.city + ', ' + data.location.country;
-			 timezone = data.location.timezone;
-			 isp = data.isp;
+			timezone = 'UTC' + data.location.timezone;
+			isp = data.isp;
 			console.log(ipad, location, timezone, isp);
 		} catch (error) {
 			console.log(error);
 		}
-
-	 }
+	}
 </script>
+
 <div class="flex flex-col items-center justify-center gap-4">
-<h1>IP Adress Tracker</h1>
-<input type="text" bind:value={ip} placeholder="Enter your IP" />
-<button class="btn" onclick={combineLink}>Hallihalo</button>
-<div class="flex flex-row items-center justify-center gap-4">
-	<p>IP Address: {ipad}</p>
-	<p>Location: {location}</p>
-	<p>Timezone: {timezone}</p>
-	<p>ISP: {isp}</p>
-</div>
+	<h1>IP Adress Tracker</h1>
+	<input type="text" bind:value={ip} placeholder="Enter your IP" />
+	<button class="btn" onclick={combineLink}>Hallihalo</button>
+	<div class="flex flex-row items-center justify-center gap-4">
+		<p>IP Address: {ipad}</p>
+		<p>Location: {location}</p>
+		<p>Timezone: {timezone}</p>
+		<p>ISP: {isp}</p>
+	</div>
 </div>
