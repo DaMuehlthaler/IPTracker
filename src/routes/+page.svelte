@@ -20,16 +20,20 @@
 		return ipRegex.test(ip);
 	}
 
+	let ipad = '';
+	let location = '';
+	let timezone = '';
+	let isp = '';
 
 	 async function fetchIpData() {
 		try {
 			const response = await fetch(fetchlink + ip);
 			const data = await response.json();
 			console.log(data);
-			let ipad = data.ip;
-			let location = data.location.city + ', ' + data.location.country;
-			let timezone = data.location.timezone;
-			let isp = data.isp;
+			ipad = data.ip;
+			location = data.location.city + ', ' + data.location.country;
+			 timezone = data.location.timezone;
+			 isp = data.isp;
 			console.log(ipad, location, timezone, isp);
 		} catch (error) {
 			console.log(error);
@@ -42,9 +46,9 @@
 <input type="text" bind:value={ip} placeholder="Enter your IP" />
 <button class="btn" onclick={combineLink}>Hallihalo</button>
 <div class="flex flex-row items-center justify-center gap-4">
-	<p>IP Address: </p>
-	<p>Location: </p>
-	<p>Timezone: </p>
-	<p>ISP: </p>
+	<p>IP Address: {ipad}</p>
+	<p>Location: {location}</p>
+	<p>Timezone: {timezone}</p>
+	<p>ISP: {isp}</p>
 </div>
 </div>
