@@ -9,7 +9,14 @@
 		console.log(ip);
 	}
 </script>
-
+<div class="flex flex-col items-center justify-center gap-4">
 <h1>IP Adress Tracker</h1>
 <input type="text" bind:value={ip} placeholder="Enter your IP" />
 <button class="btn" onclick={combineLink}>Hallihalo</button>
+<div class="flex flex-row items-center justify-center gap-4">
+	<p>IP Address: </p>
+	<p>Location: </p>
+	<p>Timezone: </p>
+	<p>ISP: </p>
+</div>
+</div>
