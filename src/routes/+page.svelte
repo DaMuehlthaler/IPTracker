@@ -63,12 +63,16 @@
 	}
 </script>
 
-<div class="flex flex-col items-center justify-center gap-4 h-screen">
-	<h1>IP Address Tracker</h1>
+<div class="flex h-screen flex-col items-center justify-center gap-4">
+	<p
+		class="m-0 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none"
+	>
+		IP Address Tracker
+	</p>
 	<input type="text" bind:value={ip} placeholder="Enter your IP" />
 	<button class="btn" onclick={combineLink}>Submit</button>
 	<div
-		class="flex h-[10%] w-[80%] flex-row items-start justify-center gap-2 rounded-lg bg-white p-4 text-black shadow-lg space-x-56"
+		class="flex h-[10%] w-[80%] flex-row items-start justify-center gap-2 space-x-56 rounded-lg bg-white p-4 text-black shadow-lg"
 	>
 		<div>
 			<p class="font-bold">IP Address:</p>
@@ -87,5 +91,5 @@
 			<p>{isp}</p>
 		</div>
 	</div>
-	<div id="map" class="w-screen h-screen"></div>
+	<div id="map" class="h-screen w-screen"></div>
 </div>
