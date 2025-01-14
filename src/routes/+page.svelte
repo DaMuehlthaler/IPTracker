@@ -30,6 +30,7 @@
 			let location = data.location.city + ', ' + data.location.country;
 			let timezone = data.location.timezone;
 			let isp = data.isp;
+			console.log(ipad, location, timezone, isp);
 		} catch (error) {
 			console.log(error);
 		}
