@@ -87,5 +87,5 @@
 			<p>{isp}</p>
 		</div>
 	</div>
-	<div id="map" class="h-80 w-80"></div>
+	<div id="map" class="w-screen h-screen"></div>
 </div>
