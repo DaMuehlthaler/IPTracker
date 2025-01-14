@@ -9,6 +9,7 @@
 			let finishfetchlink = fetchlink + ip;
 			console.log(finishfetchlink);
 			console.log(ip);
+			fetchIpData();
 		} else {
 			console.log('invalid ip');
 		}
@@ -18,6 +19,22 @@
 			/^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}$/;
 		return ipRegex.test(ip);
 	}
+
+
+	 async function fetchIpData() {
+		try {
+			const response = await fetch(fetchlink + ip);
+			const data = await response.json();
+			console.log(data);
+			let ipad = data.ip;
+			let location = data.location.city + ', ' + data.location.country;
+			let timezone = data.location.timezone;
+			let isp = data.isp;
+		} catch (error) {
+			console.log(error);
+		}
+
+	 }
 </script>
 <div class="flex flex-col items-center justify-center gap-4">
 <h1>IP Adress Tracker</h1>
