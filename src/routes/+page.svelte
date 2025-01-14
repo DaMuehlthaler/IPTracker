@@ -76,5 +76,5 @@
     <p>Timezone: {timezone}</p>
     <p>ISP: {isp}</p>
   </div>
-  <div id="map" class="w-80 h-48"></div>
+  <div id="map" class="w-80 h-80"></div>
 </div>
