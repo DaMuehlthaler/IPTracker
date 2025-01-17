@@ -65,11 +65,11 @@
 
 <div class="flex h-screen flex-col items-center justify-center gap-4">
 	<p
-		class="m-0 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none"
+		class="m-0 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none mt-8"
 	>
 		IP Address Tracker
 	</p>
-	<input type="text" bind:value={ip} placeholder="Enter your IP" />
+	<input type="text" class="input input-bordered input-primary w-full max-w-xs" bind:value={ip} placeholder="Enter your IP" />
 	<button class="btn btn-outline btn-primary" onclick={combineLink}>Submit</button>
 	<div
 		class="flex h-[10%] w-[80%] flex-row items-start justify-center gap-2 space-x-56 rounded-lg bg-white p-4 text-black shadow-lg"
