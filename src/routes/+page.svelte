@@ -73,7 +73,6 @@
 </div>
 <div class="flex h-screen flex-col items-center justify-center gap-4">
 	<p
-		class="m-0 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none"
 		class="m-0 mt-8 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none"
 	>
 		IP Address Tracker
