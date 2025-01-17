@@ -63,7 +63,7 @@
 	}
 </script>
 
-<div class="items-right justify-right flex flex-col gap-4">
+<div class=" flex flex-col gap-4 justify-self-end">
 	<div class="form-control w-52">
 		<label class="label cursor-pointer">
 			<span class="label-text"></span>
