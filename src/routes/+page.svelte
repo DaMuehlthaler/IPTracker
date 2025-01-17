@@ -63,12 +63,21 @@
 	}
 </script>
 
+<div class="items-right justify-right flex flex-col gap-4">
+	<div class="form-control w-52">
+		<label class="label cursor-pointer">
+			<span class="label-text"></span>
+			<input type="checkbox" class="toggle toggle-primary" checked="checked" />
+		</label>
+	</div>
+</div>
 <div class="flex h-screen flex-col items-center justify-center gap-4">
 	<p
 		class="m-0 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none"
 	>
 		IP Address Tracker
 	</p>
+
 	<input type="text" bind:value={ip} placeholder="Enter your IP" />
 	<button class="btn btn-outline btn-primary" onclick={combineLink}>Submit</button>
 	<div
