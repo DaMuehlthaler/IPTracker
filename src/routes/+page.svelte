@@ -63,32 +63,26 @@
 	}
 </script>
 
-<div class=" flex flex-col gap-4 justify-self-end">
-	<div class="form-control w-52 justify-end">
-		<label class="label cursor-pointer">
-			<span class="label-text"></span>
-			<input type="checkbox" class="toggle toggle-primary" checked="checked" />
-		</label>
-	</div>
-</div>
-<div class="flex h-screen flex-col items-center justify-center gap-4">
+<!-- 333533 -->
+
+<div class="flex h-screen flex-col items-center justify-center gap-4 bg-[#34403a]">
 	<p
 		class="m-0 mt-8 box-border text-center text-4xl font-bold tracking-wide text-white no-underline outline-none"
 	>
 		IP Address Tracker
 	</p>
-<div class="flex items-center bg-base-100 mt-10 mb-10 rounded shadow-lg">
+<div class="flex items-center bg-base-100 mt-3 mb-10 rounded shadow-lg">
   <input
     type="text"
     placeholder="Search for any IP address or domain"
     class="input input-bordered w-[500px] rounded-r-none"
 	bind:value={ip}
   />
-  <button class="btn btn-primary rounded-l-none" onclick={combineLink}>
+  <button class="btn btn-error rounded-l-none" onclick={combineLink}>
     ➤
   </button>
 </div>
-
+	
 	<div
 		class="flex h-[20%] w-[80%] flex-row items-start justify-center gap-2 space-x-56 rounded-lg bg-white p-4 text-black shadow-lg"
 	>
