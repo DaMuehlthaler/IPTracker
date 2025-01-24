@@ -64,7 +64,7 @@
 </script>
 
 <div class=" flex flex-col gap-4 justify-self-end">
-	<div class="form-control w-52">
+	<div class="form-control w-52 justify-end">
 		<label class="label cursor-pointer">
 			<span class="label-text"></span>
 			<input type="checkbox" class="toggle toggle-primary" checked="checked" />
@@ -77,11 +77,20 @@
 	>
 		IP Address Tracker
 	</p>
+<div class="flex items-center bg-base-100 mt-10 mb-10 rounded shadow-lg">
+  <input
+    type="text"
+    placeholder="Search for any IP address or domain"
+    class="input input-bordered w-[500px] rounded-r-none"
+	bind:value={ip}
+  />
+  <button class="btn btn-primary rounded-l-none" onclick={combineLink}>
+    ➤
+  </button>
+</div>
 
-	<input type="text" bind:value={ip} placeholder="Enter your IP" />
-	<button class="btn btn-outline btn-primary" onclick={combineLink}>Submit</button>
 	<div
-		class="flex h-[10%] w-[80%] flex-row items-start justify-center gap-2 space-x-56 rounded-lg bg-white p-4 text-black shadow-lg"
+		class="flex h-[20%] w-[80%] flex-row items-start justify-center gap-2 space-x-56 rounded-lg bg-white p-4 text-black shadow-lg"
 	>
 		<div>
 			<p class="font-bold">IP Address:</p>
@@ -99,6 +108,7 @@
 			<p class="font-bold">ISP:</p>
 			<p>{isp}</p>
 		</div>
+	
 	</div>
-	<div id="map" class="h-screen w-screen"></div>
+	<div id="map" class="h-screen w-screen z-0"></div>
 </div>
