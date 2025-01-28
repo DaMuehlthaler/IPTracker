@@ -71,18 +71,16 @@
 	>
 		IP Address Tracker
 	</p>
-<div class="flex items-center bg-base-100 mt-3 mb-10 rounded shadow-lg">
-  <input
-    type="text"
-    placeholder="Search for any IP address or domain"
-    class="input input-bordered w-[500px] rounded-r-none"
-	bind:value={ip}
-  />
-  <button class="btn btn-error rounded-l-none" onclick={combineLink}>
-    ➤
-  </button>
-</div>
-	
+	<div class="mb-10 mt-3 flex items-center rounded bg-base-100 shadow-lg">
+		<input
+			type="text"
+			placeholder="Search for any IP address or domain"
+			class="input input-bordered w-[500px] rounded-r-none"
+			bind:value={ip}
+		/>
+		<button class="btn btn-error rounded-l-none" onclick={combineLink}> ➤ </button>
+	</div>
+
 	<div
 		class="flex h-[20%] w-[80%] flex-row items-start justify-center gap-2 space-x-56 rounded-lg bg-white p-4 text-black shadow-lg"
 	>
@@ -102,7 +100,6 @@
 			<p class="font-bold">ISP:</p>
 			<p>{isp}</p>
 		</div>
-	
 	</div>
-	<div id="map" class="h-screen w-screen z-0"></div>
+	<div id="map" class="z-0 h-screen w-screen"></div>
 </div>
